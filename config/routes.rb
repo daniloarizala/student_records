@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  get 'students/index'
+	# routes
+	# HTTP VERBS: get, post, put, patch, delete
+	# verb 'url/path'
 
-  get 'students/show'
+  get 'students' => 'students#index'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'students/:id' => 'students#show', as: 'student', id: /\d+/
+
+
+
 end
