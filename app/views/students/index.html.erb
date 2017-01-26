@@ -4,7 +4,7 @@
 
 	<div class="students">
 		<p>
-			<strong>Name:</strong> <%= student.name %>
+			<strong>Name:</strong> <%= link_to student.name, student_path(student) %>
 		</p>
 	</div>
 <% end %>
