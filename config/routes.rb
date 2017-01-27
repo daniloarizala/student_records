@@ -7,6 +7,6 @@ Rails.application.routes.draw do
 
   get 'students/:id' => 'students#show', as: 'student', id: /\d+/
 
-
+  root to: 'students#index'
 
 end
