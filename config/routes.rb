@@ -1,12 +1,20 @@
 Rails.application.routes.draw do
-	# routes
-	# HTTP VERBS: get, post, put, patch, delete
-	# verb 'url/path'
+		# routes
+		# HTTP VERBS: get, post, put, patch, delete
+		# verb 'url/path'
 
-  get 'students' => 'students#index'
+	# SHOW routes
+	  get 'students' => 'students#index'
 
-  get 'students/:id' => 'students#show', as: 'student', id: /\d+/
+	  get 'students/:id' => 'students#show', as: 'student', id: /\d+/
 
-  root to: 'students#index'
+
+	  get 'student/new' => 'students#new', as: 'new_student'
+
+	  
+	# CREATE routes
+	  post 'students' => 'students#create'
+
+	  root to: 'students#index'
 
 end
